@@ -1,0 +1,19 @@
+.benefits{
+    &__title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    }   
+    &__list {
+        display: flex;
+        gap: var(--distance-between-cards);
+    }
+    &__item {
+        flex-basis: calc((100% - (var(--number-columns-benefits) - 1) * var(--distance-between-cards)) / var(--number-columns-benefits));
+    }
+    &__icon  {
+        @include f-aling;
+        height: 120px;
+        background-color: var(--color-bg-secondary);
+        margin-bottom: 30px;
+    }
+}

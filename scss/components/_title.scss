@@ -1,0 +1,13 @@
+.section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--color-nav-and-title);
+}
+.title {
+    /* як заголовок наслідує шрифт з браузера десь 16 */
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--color-nav-and-title);
+}

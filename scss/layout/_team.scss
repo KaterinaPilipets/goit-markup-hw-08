@@ -1,0 +1,33 @@
+.team {
+    background-color: var(--color-bg-secondary);
+    &__list {
+        display: flex;
+        gap: var(--distance-between-cards);
+    }    
+    &__description {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: var(--color-bg-primary);
+    }
+    &__item {
+        flex-basis: calc((100% - (var(--number-columns-team) - 1) * var(--distance-between-cards)) / var(--number-columns-team));
+        border-radius: 0px 0px 4px 4px;
+    }
+    &__icon {
+        fill: var(--color-social-link);
+    }
+    &__title {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}
+
