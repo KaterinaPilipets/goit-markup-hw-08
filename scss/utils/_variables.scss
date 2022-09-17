@@ -1,11 +1,29 @@
 :root {
-    --width-conteiner: 1200px;
+    
     --distance-between-cards: 30px;
+  
+    @media screen and (min-width: 1200px)  {
+            
+        --number-columns-benefits: 4;
+        --number-columns-work: 3;
+        --number-columns-team: 4;
+        --number-columns-portfolio-galery: 3;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        
+        --number-columns-benefits: 2;
+        --number-columns-work: 3;
+        --number-columns-team: 2;
+        --number-columns-portfolio-galery: 2;
+    }
+    @media screen  and (max-width: 767px) {
+        
+        --number-columns-benefits: 1;
+        --number-columns-work: 1;
+        --number-columns-team: 1;
+        --number-columns-portfolio-galery: 1;
+    }
 
-    --number-columns-benefits: 4;
-    --number-columns-work: 3;
-    --number-columns-team: 4;
-    --number-columns-portfolio-galery: 3;
     /* color */
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #f5f4fa;

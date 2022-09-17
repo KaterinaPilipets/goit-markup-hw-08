@@ -1,11 +1,6 @@
 @charset "UTF-8";
 :root {
-  --width-conteiner: 1200px;
   --distance-between-cards: 30px;
-  --number-columns-benefits: 4;
-  --number-columns-work: 3;
-  --number-columns-team: 4;
-  --number-columns-portfolio-galery: 3;
   /* color */
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f5f4fa;
@@ -24,6 +19,30 @@
   --font-family-secondary: "Raleway", sans-serif;
   --animetion-time-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --modal-animetion-time-func: 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    --number-columns-benefits: 4;
+    --number-columns-work: 3;
+    --number-columns-team: 4;
+    --number-columns-portfolio-galery: 3;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  :root {
+    --number-columns-benefits: 2;
+    --number-columns-work: 3;
+    --number-columns-team: 2;
+    --number-columns-portfolio-galery: 2;
+  }
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --number-columns-benefits: 1;
+    --number-columns-work: 1;
+    --number-columns-team: 1;
+    --number-columns-portfolio-galery: 1;
+  }
 }
 
 .visually-hidden {
@@ -90,9 +109,23 @@ body {
 }
 
 .container {
-  width: var(--width-conteiner);
   padding: 0 15px;
   margin: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -433,6 +466,7 @@ body {
 }
 .benefits__list {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--distance-between-cards);
 }
 .benefits__item {
@@ -449,6 +483,7 @@ body {
 
 .work__list {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--distance-between-cards);
 }
 .work__item {
@@ -476,6 +511,7 @@ body {
 }
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--distance-between-cards);
 }
 .team__description {
@@ -484,7 +520,7 @@ body {
   background-color: var(--color-bg-primary);
 }
 .team__item {
-  flex-basis: calc((100% - (var(--number-columns-team) - 1) * var(--distance-between-cards)) / var(--number-columns-team));
+  width: calc((100% - (var(--number-columns-team) - 1) * var(--distance-between-cards)) / var(--number-columns-team));
   border-radius: 0px 0px 4px 4px;
 }
 .team__icon {
@@ -506,6 +542,7 @@ body {
 
 .client__list {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--distance-between-cards);
 }
 .client__item {

@@ -2,6 +2,7 @@
     background-color: var(--color-bg-secondary);
     &__list {
         display: flex;
+        flex-wrap: wrap;
         gap: var(--distance-between-cards);
     }    
     &__description {
@@ -10,7 +11,8 @@
         background-color: var(--color-bg-primary);
     }
     &__item {
-        flex-basis: calc((100% - (var(--number-columns-team) - 1) * var(--distance-between-cards)) / var(--number-columns-team));
+        width: calc((100% - (var(--number-columns-team) - 1) * var(--distance-between-cards)) / var(--number-columns-team));
+        // flex-basis: calc((100% - (var(--number-columns-team) - 1) * var(--distance-between-cards)) / var(--number-columns-team));
         border-radius: 0px 0px 4px 4px;
     }
     &__icon {

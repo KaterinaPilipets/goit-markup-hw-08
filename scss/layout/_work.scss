@@ -1,6 +1,7 @@
 .work{
     &__list {
         display: flex;
+        flex-wrap: wrap;
         gap: var(--distance-between-cards);
     }
     &__item {
