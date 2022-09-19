@@ -21,6 +21,7 @@
         }
     }
     &__container {
+        display: block;
         position: relative;
         margin-top: 4px;
     }
@@ -35,7 +36,6 @@
             border-color: var(--color-accent);
             outline: none;
         }
-
     }
     &__icon {
         position: absolute;
