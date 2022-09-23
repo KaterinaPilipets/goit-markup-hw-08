@@ -1,13 +1,21 @@
-.work{
+.work {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
         gap: var(--distance-between-cards);
     }
+
     &__item {
-        flex-basis: calc((100% - (var(--number-columns-work) - 1) * var(--distance-between-cards)) / var(--number-columns-work));
+        @include flex-basis__calc(var(--number-columns-work), var(--distance-between-cards));
         position: relative;
     }
+
     &__description {
         @include f-aling;
         position: absolute;
@@ -17,8 +25,10 @@
         width: 100%;
         background-color: rgba(47, 48, 58, 0.8);
     }
+
     &__title {
         color: var(--color-text-theme-dark);
         text-transform: uppercase;
     }
+
 }

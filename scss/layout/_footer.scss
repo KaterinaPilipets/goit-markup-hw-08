@@ -14,7 +14,7 @@
     color: inherit;
   }
 }
- 
+
 .footer-address {
   font-style: normal;
   margin-top: 20px;
@@ -28,7 +28,7 @@
       color: var(--color-accent);
     }
   }
-  li+li {
+  li + li {
     margin-top: 9px;
   }
 }
@@ -56,13 +56,12 @@
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
-    &::placeholder { color: rgba(255, 255, 255, 0.6);}
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
     &:focus {
       border-color: var(--color-accent);
       outline: none;
     }
   }
 }
-
-
-

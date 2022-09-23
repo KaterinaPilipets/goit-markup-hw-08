@@ -1,5 +1,9 @@
 @mixin f-aling {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-basis__calc($number-columns, $distance-between) {
+  flex-basis: calc((100% - ($number-columns - 1) * $distance-between) / $number-columns);
 }

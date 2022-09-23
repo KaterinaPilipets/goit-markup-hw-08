@@ -1,27 +1,28 @@
 :root {
-    
+    --width-mobile: 480px;
+    --width-tablet: 768px;
+    --width-desktop: 1200px;
     --distance-between-cards: 30px;
-  
-    @media screen and (min-width: 1200px)  {
-            
+    --number-columns-benefits: 1;
+    // --number-columns-work: 1;
+    --number-columns-team: 1;
+    --number-columns-galery: 1;
+    --number-columns-client: 2;
+
+    @media screen and (min-width: 768px) {
+        --number-columns-benefits: 2;
+        // --number-columns-work: 3;
+        --number-columns-team: 2;
+        --number-columns-galery: 2;
+        --number-columns-client: 3;
+    }
+
+    @media screen and (min-width: 1200px) {
         --number-columns-benefits: 4;
         --number-columns-work: 3;
         --number-columns-team: 4;
-        --number-columns-portfolio-galery: 3;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        
-        --number-columns-benefits: 2;
-        --number-columns-work: 3;
-        --number-columns-team: 2;
-        --number-columns-portfolio-galery: 2;
-    }
-    @media screen  and (max-width: 767px) {
-        
-        --number-columns-benefits: 1;
-        --number-columns-work: 1;
-        --number-columns-team: 1;
-        --number-columns-portfolio-galery: 1;
+        --number-columns-galery: 3;
+        --number-columns-client: 6;
     }
 
     /* color */
@@ -43,8 +44,10 @@
     --color-border-heder: #ececec;
     --color-border-potfolio: #eeeeee;
 
-    --font-family-primary: "Roboto", sans-serif;
-    --font-family-secondary: "Raleway", sans-serif;
+    --font-family-primary: "Roboto",
+    sans-serif;
+    --font-family-secondary: "Raleway",
+    sans-serif;
     --animetion-time-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --modal-animetion-time-func: 2000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
