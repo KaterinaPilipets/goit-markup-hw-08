@@ -371,6 +371,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 @media screen and (max-width: 1299px) {

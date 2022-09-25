@@ -98,6 +98,7 @@
 .modal-form-check {
     &__lable {
         @include f-aling;
+        flex-wrap: wrap;
         margin-bottom: 30px;
 
         @media screen and (max-width:1299px) {
