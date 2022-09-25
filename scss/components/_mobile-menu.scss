@@ -14,6 +14,7 @@
      display: flex;
      flex-direction: column;
      background-color: var(--color-bg-primary);
+     overflow-y: scroll;
 
      .mobile-menu__close-btn {
          position: absolute;
