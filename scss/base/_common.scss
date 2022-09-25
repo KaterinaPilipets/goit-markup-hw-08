@@ -34,12 +34,10 @@ img {
 }
 
 body {
-    background-color: var(--color-bg-primary);
-    color: var(--color-text);
-
     font-family: var(--font-family-primary);
     font-size: 14px;
     line-height: (24px / 14px);
     letter-spacing: 0.03em;
-
+    background-color: var(--color-bg-primary);
+    color: var(--color-text);
 }

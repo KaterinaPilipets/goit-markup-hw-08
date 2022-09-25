@@ -30,7 +30,6 @@
 
     &__item {
         @include flex-basis__calc(var(--number-columns-galery), var(--distance-between-cards));
-        // flex-basis: calc((100% - (var(--number-columns-galery) - 1) * var(--distance-between-cards)) / var(--number-columns-galery));
     }
 
     &__description {
@@ -47,10 +46,10 @@
     }
 
     &__title {
+        margin-bottom: 4px;
         font-size: 18px;
         line-height: 2;
         letter-spacing: 0.06em;
-        margin-bottom: 4px;
         color: var(--color-nav-and-title);
     }
 
@@ -70,16 +69,16 @@
         left: 0;
         width: 100%;
         height: 100%;
-        overflow: auto;
-        transform: translateY(100%);
-        transition: transform var(--animetion-time-func), opacity var(--animetion-time-func);
         @include f-aling;
         padding: 24px 24px;
-        color: var(--color-text-theme-dark);
-        background-color: rgba(33, 150, 243, 0.9);
         font-size: 18px;
         line-height: 1.56;
         opacity: 0;
+        overflow: auto;
+        transform: translateY(100%);
+        transition: transform var(--animetion-time-func), opacity var(--animetion-time-func);
+        color: var(--color-text-theme-dark);
+        background-color: rgba(33, 150, 243, 0.9);
     }
 
     &__link {

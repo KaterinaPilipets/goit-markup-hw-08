@@ -1,15 +1,14 @@
 .logo {
-    
-
     font-family: var(--font-family-secondary);
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
+
     &--accent {
         color: var(--color-accent);
     }
-    &--header{
+
+    &--header {
         color: var(--color-logo-header);
     }
 }
-

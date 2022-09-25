@@ -17,7 +17,6 @@
 
     &__item {
         @include flex-basis__calc(var(--number-columns-benefits), var(--distance-between-cards));
-
     }
 
     &__icon {

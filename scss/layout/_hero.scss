@@ -2,9 +2,10 @@
     max-width: 767px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #c4c4c4;
     padding-top: 118px;
     padding-bottom: 118px;
+    text-align: center;
+    background-color: #c4c4c4;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mobile.jpg);
 
     @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -40,21 +41,18 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
     color: var(--color-text-theme-dark);
-    text-align: center;
-
 }
 
 .hero__title {
-
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 
     @media screen and (min-width: 480px) {
         width: 360px;
@@ -65,17 +63,6 @@
         font-size: 44px;
         line-height: 1.36;
     }
-
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-
-
-
-
-
-
-
 }
 
 .hero__btn {

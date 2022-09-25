@@ -20,7 +20,6 @@
     }
 
     &__item {
-        // width: calc((100% - (var(--number-columns-team) - 1) * var(--distance-between-cards)) / var(--number-columns-team));
         @include flex-basis__calc(var(--number-columns-team), var(--distance-between-cards));
         border-radius: 0px 0px 4px 4px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -32,16 +31,16 @@
 
     &__title {
         margin-bottom: 10px;
+        text-align: center;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.19;
-        text-align: center;
     }
 
     &__text {
-        font-size: 16px;
-        line-height: 1.19;
         text-align: center;
         margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 1.19;
     }
 }

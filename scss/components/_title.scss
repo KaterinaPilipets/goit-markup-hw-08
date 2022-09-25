@@ -1,12 +1,9 @@
 .section__title {
     margin-bottom: 30px;
-
     text-align: center;
-    color: var(--color-nav-and-title);
-
-
     font-size: 28px;
     line-height: (33px / 28px);
+    color: var(--color-nav-and-title);
 
     @media screen and (min-width:1200px) {
         font-size: 36px;
@@ -16,15 +13,13 @@
 }
 
 .title {
-
     /* як заголовок наслідує шрифт з браузера десь 16 */
+    text-align: center;
     font-size: 14px;
     line-height: 1.14;
     color: var(--color-nav-and-title);
-    text-align: center;
 
     @media screen and (min-width:1200px) {
         text-align: left;
     }
-
 }

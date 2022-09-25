@@ -4,14 +4,12 @@
     --width-desktop: 1200px;
     --distance-between-cards: 30px;
     --number-columns-benefits: 1;
-    // --number-columns-work: 1;
     --number-columns-team: 1;
     --number-columns-galery: 1;
     --number-columns-client: 2;
 
     @media screen and (min-width: 768px) {
         --number-columns-benefits: 2;
-        // --number-columns-work: 3;
         --number-columns-team: 2;
         --number-columns-galery: 2;
         --number-columns-client: 3;
@@ -25,25 +23,19 @@
         --number-columns-client: 6;
     }
 
-    /* color */
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #f5f4fa;
     --color-bg-theme-dark: #2f303a;
     --color-bg-social-link-footer: rgba(255, 255, 255, 0.1);
-
     --color-accent: #2196f3;
-
     --color-text-theme-dark: #ffffff;
     --color-logo-header: #000000;
     --color-text: #757575;
     --color-nav-and-title: #212121;
-
     --color-social-link: #afb1b8;
     --color-contacts-footer: rgba(255, 255, 255, 0.6);
-
     --color-border-heder: #ececec;
     --color-border-potfolio: #eeeeee;
-
     --font-family-primary: "Roboto",
     sans-serif;
     --font-family-secondary: "Raleway",
