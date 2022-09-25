@@ -15,6 +15,8 @@
      flex-direction: column;
      background-color: var(--color-bg-primary);
      overflow-y: scroll;
+     font-weight: 500;
+     letter-spacing: 0.02em;
 
      .mobile-menu__close-btn {
          position: absolute;
@@ -36,7 +38,7 @@
 
 
  .mobile-nav {
-     font-weight: 500;
+
      font-size: 40px;
      line-height: (47px / 40px);
      letter-spacing: 0.02em;
@@ -53,10 +55,10 @@
      display: flex;
      flex-direction: column-reverse;
      gap: 32px;
-     font-weight: 500;
+
      font-size: 24px;
      line-height: (28px / 24px);
-     letter-spacing: 0.02em;
+
      margin-top: auto;
      margin-bottom: 64px;
 
@@ -72,8 +74,8 @@
      display: flex;
      flex-wrap: wrap;
      color: var(--color-accent);
-
-
+     font-size: 18px;
+     line-height: (22px / 18px);
 
      &__item {
          &:not(:last-child) {

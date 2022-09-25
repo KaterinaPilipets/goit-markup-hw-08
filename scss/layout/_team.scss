@@ -9,8 +9,14 @@
 
     &__description {
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 24px;
         background-color: var(--color-bg-primary);
+
+        @media screen and (min-width:1200px) {
+            padding-bottom: 30px;
+        }
+
+
     }
 
     &__item {

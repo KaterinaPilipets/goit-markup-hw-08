@@ -178,11 +178,18 @@ body {
 }
 
 .section__title {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
+  margin-bottom: 30px;
   text-align: center;
   color: var(--color-nav-and-title);
+  font-size: 28px;
+  line-height: 1.1785714286;
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .title {
@@ -190,6 +197,12 @@ body {
   font-size: 14px;
   line-height: 1.14;
   color: var(--color-nav-and-title);
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    text-align: left;
+  }
 }
 
 .social__list {
@@ -416,6 +429,8 @@ body {
   flex-direction: column;
   background-color: var(--color-bg-primary);
   overflow-y: scroll;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 .mobile-menu.is-open .mobile-menu__close-btn {
   position: absolute;
@@ -432,7 +447,6 @@ body {
 }
 
 .mobile-nav {
-  font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
@@ -446,10 +460,8 @@ body {
   display: flex;
   flex-direction: column-reverse;
   gap: 32px;
-  font-weight: 500;
   font-size: 24px;
   line-height: 1.1666666667;
-  letter-spacing: 0.02em;
   margin-top: auto;
   margin-bottom: 64px;
 }
@@ -463,6 +475,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   color: var(--color-accent);
+  font-size: 18px;
+  line-height: 1.2222222222;
 }
 .mobile-social__item:not(:last-child) {
   padding-right: 10px;
@@ -496,23 +510,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   position: inherit;
-}
-
-.current {
-  color: var(--color-accent);
-  position: relative;
-}
-@media screen and (min-width: 767px) {
-  .current::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: var(--color-accent);
-    border-radius: 2px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -570,6 +567,23 @@ body {
   }
   .header-contact__link:hover, .header-contact__link:focus {
     color: var(--color-accent);
+  }
+}
+
+.current {
+  color: var(--color-accent);
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .current::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-accent);
+    border-radius: 2px;
   }
 }
 
@@ -648,6 +662,11 @@ body {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+@media screen and (min-width: 768px) {
+  .benefits__title {
+    text-align: left;
+  }
+}
 .benefits__list {
   display: flex;
   flex-wrap: wrap;
@@ -710,8 +729,13 @@ body {
 }
 .team__description {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   background-color: var(--color-bg-primary);
+}
+@media screen and (min-width: 1200px) {
+  .team__description {
+    padding-bottom: 30px;
+  }
 }
 .team__item {
   flex-basis: calc((100% - (var(--number-columns-team) - 1) * var(--distance-between-cards)) / var(--number-columns-team));
