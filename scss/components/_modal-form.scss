@@ -3,28 +3,39 @@
     height: 100%;
     outline: none;
     text-align: center;
+
     &__title {
         margin-bottom: 12px;
         font-weight: 700;
         font-size: 20px;
-        line-height: 1.15;  
         color: var(--color-nav-and-title);
+        line-height: 1.5;
+
+        @media screen and (min-width:1200px) {
+            line-height: 1.15;
         }
+
+
+    }
+
     &__label {
         display: block;
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.01em;
         text-align: left;
+
         &+& {
             margin-top: 10px;
         }
     }
+
     &__container {
         display: block;
         position: relative;
         margin-top: 4px;
     }
+
     &__input {
         width: 100%;
         height: 40px;
@@ -32,21 +43,25 @@
         border-radius: 4px;
         padding: 12px 12px 12px 42px;
         transition: border-color var(--animetion-time-func);
+
         &:focus {
             border-color: var(--color-accent);
             outline: none;
         }
     }
+
     &__icon {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         left: 12px;
         fill: var(--color-nav-and-title);
+
         .modal-form__input:focus+& {
-                fill: var(--color-accent);
-            }
+            fill: var(--color-accent);
+        }
     }
+
     &__coment {
         width: 100%;
         height: 117px;
@@ -57,16 +72,19 @@
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         transition: border-color var(--animetion-time-func);
+
         &::placeholder {
             color: rgba(117, 117, 117, 0.5);
         }
+
         &:focus {
             border-color: var(--color-accent);
             outline: none;
         }
 
-        
+
     }
+
     .btn-accent {
         padding: 10px 52px;
     }
@@ -77,31 +95,38 @@
 
 
 
-.modal-form-check{
+.modal-form-check {
     &__lable {
         @include f-aling;
         margin-bottom: 30px;
+
+        @media screen and (max-width:1299px) {
+            font-size: 12px;
+            line-height: (14px / 12px);
+        }
+
+
     }
+
     &__icon {
         margin-right: 7px;
         fill: var(--color-nav-and-title);
-        .modal-form-check:checked~&{
+
+        .modal-form-check:checked~& {
             display: none;
         }
     }
+
     &__icon-active {
         display: none;
         margin-right: 7px;
+
         .modal-form-check:checked~& {
             display: block;
         }
     }
+
     &__link {
         color: var(--color-accent);
     }
 }
-
-
-
-
-

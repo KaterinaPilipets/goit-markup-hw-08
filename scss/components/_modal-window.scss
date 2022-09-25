@@ -2,23 +2,36 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 528px;
-    height: 581px;
+    width: calc(100% - 30px);
+
+    @media screen and (min-width:480px) {
+        width: 450px;
+        height: 609px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 528px;
+        height: 581px;
+    }
+
     padding: 40px;
     background-color: var(--color-bg-primary);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1) rotate(0deg);
     transition: transform var(--modal-animetion-time-func),
-        background-color var(--modal-animetion-time-func) 1000ms,
-        border-radius var(--modal-animetion-time-func);
+    background-color var(--modal-animetion-time-func) 1000ms,
+    border-radius var(--modal-animetion-time-func);
 }
+
 .backdrop.is-hidden .modal {
     border-radius: 50%;
     background-color: var(--color-accent);
     transform: translate(100%, 100%) scale(2) rotate(720deg);
 }
+
 .closed {
     position: absolute;
     top: 8px;
@@ -30,10 +43,9 @@
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: color var(--animetion-time-func);
+
     &:hover,
     &:focus {
         color: var(--color-accent);
     }
 }
-
-

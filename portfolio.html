@@ -1,465 +1,636 @@
 <!DOCTYPE html>
 <html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Портфоліо</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+		/>
+		<link rel="stylesheet" href="./css/main.min.css" />
+	</head>
 
-  <title>Портфоліо</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-  <link rel="stylesheet" href="./css/main.css" />
-</head>
+	<body>
+		<header class="page">
+			<div class="container page__container">
+				<a class="logo logo--header link" href="./index.html" lang="en"><span class="logo--accent">Web</span>Studio</a>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li>
+							<a class="link menu__link current" href="./index.html">Студія</a>
+						</li>
+						<li>
+							<a class="link menu__link" href="./portfolio.html">Портфоліо</a>
+						</li>
+						<li><a class="link menu__link" href="">Контакти</a></li>
+					</ul>
+				</nav>
+				<ul class="header-contact__list">
+					<li>
+						<a class="header-contact__link link" href="mailto:info@devstudio.com" lang="en">
+							<svg class="icon" width="16" height="12">
+								<use href="./images/icons.svg#icon-envelope"></use>
+							</svg>
+							info@devstudio.com</a
+						>
+					</li>
 
-<body>
-  <header class="page">
-    <div class="container page__container">
-      <a class="logo link" href="./index.html" lang="en"><span class="logo--accent">Web</span>Studio</a>
-      <nav class="page-nav">
-        <ul class="page-nav__list">
-          <li>
-            <a class="link page-nav__link" href="./index.html">Студія</a>
-          </li>
-          <li>
-            <a class="link page-nav__link current" href="./portfolio.html">Портфоліо</a>
-          </li>
-          <li><a class="link page-nav__link" href="">Контакти</a></li>
-        </ul>
-      </nav>
-      <ul class="header-contact__list">
-        <li>
-          <a class="header-contact__link link" href="mailto:info@devstudio.com" lang="en">
-            <svg class="icon" width="16" height="12">
-              <use href="./images/icons.svg#icon-envelope"></use>
-            </svg>
-            info@devstudio.com</a>
-        </li>
+					<li>
+						<a class="header-contact__link link" href="tel:+380961111111">
+							<svg class="icon" width="10" height="16">
+								<use href="./images/icons.svg#icon-smartphone"></use>
+							</svg>
+							+38 096 111 11 11</a
+						>
+					</li>
+				</ul>
+				<button class="page__open-btn js-open-menu" type="button">
+					<svg class="mobile-menu__icon" width="40" height="40">
+						<use href="./images/icons.svg#icon-burger"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="mobile-menu js-menu-container">
+				<button class="mobile-menu__close-btn js-close-menu">
+					<svg class="mobile-menu__icon" width="40" height="40">
+						<use href="./images/icons.svg#icon-menu-close"></use>
+					</svg>
+				</button>
 
-        <li>
-          <a class="header-contact__link link" href="tel:+380961111111">
-            <svg class="icon" width="10" height="16">
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11</a>
-        </li>
-      </ul>
-    </div>
-  </header>
+				<ul class="mobile-nav">
+					<li>
+						<a class="link current" href="./index.html">Студія</a>
+					</li>
+					<li>
+						<a class="link" href="./portfolio.html">Портфоліо</a>
+					</li>
+					<li><a class="link" href="">Контакти</a></li>
+				</ul>
 
-  <main class="main">
-    <section class="section portfolio">
-      <div class="container">
-        <h1 class="visually-hidden">Портфоліо</h1>
-        <ul class="portfolio-filter">
-          <li><button class="btn" type="button">Усі</button></li>
-          <li>
-            <button class="btn" type="button">Веб-сайти</button>
-          </li>
-          <li>
-            <button class="btn" type="button">Додатки</button>
-          </li>
-          <li><button class="btn" type="button">Дизайн</button></li>
-          <li>
-            <button class="btn" type="button">Маркетинг</button>
-          </li>
-        </ul>
-        <ul class="galery">
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
-                <picture>
-                  <source srcset="./images/img-galery-desktop-1.webp 1x, ./images/img-galery-desktop@2x-1.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-1.jpg 1x, ./images/img-galery-desktop@2x-1.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-1.webp 1x, ./images/img-galery-tablet@2x-1.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-1.jpg 1x, ./images/img-galery-tablet@2x-1.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-1.webp 1x, ./images/img-galery-mobile@2x-1.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-1.jpg 1x, ./images/img-galery-mobile@2x-1.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-1.jpg" alt="Відкритий ноутбук" class="picture-img" />
-                </picture>
-                <!-- <img
-                    src="./images/portfolio_1.jpg"
-                    alt="Відкритий ноутбук"
-                    width="370"
-                  /> -->
+				<ul class="mobile-contact">
+					<li>
+						<a class="link" href="mailto:info@devstudio.com" lang="en"> info@devstudio.com</a>
+					</li>
 
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-              <div class="galery__description">
-                <h2 class="galery__title">Технокряк</h2>
-                <p class="galery__text">Веб-сайт</p>
-              </div>
-            </a>
-          </li>
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
-                <picture>
-                  <source srcset="./images/img-galery-desktop-2.webp 1x, ./images/img-galery-desktop@2x-2.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-2.jpg 1x, ./images/img-galery-desktop@2x-2.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-2.webp 1x, ./images/img-galery-tablet@2x-2.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-2.jpg 1x, ./images/img-galery-tablet@2x-2.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-2.webp 1x, ./images/img-galery-mobile@2x-2.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-2.jpg 1x, ./images/img-galery-mobile@2x-2.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-2.jpg" alt="Два чоловіка борються за м'яч" class="picture-img" />
-                </picture>
+					<li>
+						<a class="link mobile-contact__link--accent" href="tel:+380961111111"> +38 096 111 11 11</a>
+					</li>
+				</ul>
+				<ul class="mobile-social">
+					<li class="mobile-social__item">
+						<a class="link mobile-social__link" href="" lang="en"> Instagram</a>
+					</li>
+					<li class="mobile-social__item">
+						<a class="link mobile-social__link" href="" lang="en"> Twitter</a>
+					</li>
+					<li class="mobile-social__item">
+						<a class="link mobile-social__link" href="" lang="en">Facebook</a>
+					</li>
+					<li class="mobile-social__item">
+						<a class="link mobile-social__link" href="" lang="en"> LinkedIn</a>
+					</li>
+				</ul>
+			</div>
+		</header>
 
+		<main class="main">
+			<section class="section portfolio">
+				<div class="container">
+					<h1 class="visually-hidden">Портфоліо</h1>
+					<ul class="portfolio-filter">
+						<li><button class="btn" type="button">Усі</button></li>
+						<li>
+							<button class="btn" type="button">Веб-сайти</button>
+						</li>
+						<li>
+							<button class="btn" type="button">Додатки</button>
+						</li>
+						<li><button class="btn" type="button">Дизайн</button></li>
+						<li>
+							<button class="btn" type="button">Маркетинг</button>
+						</li>
+					</ul>
+					<ul class="galery">
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-1.webp 1x, ./images/img-galery-desktop@2x-1.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-1.jpg 1x, ./images/img-galery-desktop@2x-1.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-1.webp 1x, ./images/img-galery-tablet@2x-1.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-1.jpg 1x, ./images/img-galery-tablet@2x-1.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-1.webp 1x, ./images/img-galery-mobile@2x-1.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-1.jpg 1x, ./images/img-galery-mobile@2x-1.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/img-galery-mobile-1.jpg" alt="Відкритий ноутбук" class="picture-img" />
+									</picture>
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+									</p>
+								</div>
+								<div class="galery__description">
+									<h2 class="galery__title">Технокряк</h2>
+									<p class="galery__text">Веб-сайт</p>
+								</div>
+							</a>
+						</li>
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-2.webp 1x, ./images/img-galery-desktop@2x-2.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-2.jpg 1x, ./images/img-galery-desktop@2x-2.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-2.webp 1x, ./images/img-galery-tablet@2x-2.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-2.jpg 1x, ./images/img-galery-tablet@2x-2.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-2.webp 1x, ./images/img-galery-mobile@2x-2.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-2.jpg 1x, ./images/img-galery-mobile@2x-2.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/img-galery-mobile-2.jpg"
+											alt="Два чоловіка борються за м'яч"
+											class="picture-img"
+										/>
+									</picture>
 
-                <!-- <img src="./images/portfolio_2.jpg" alt="Два чоловіка борються за м'яч" width="370" /> -->
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компРесурс пропонує
-                  комплексні пропозиції з різним рівнем функціоналу та
-                  сервісів. Все це дозволить відвідувачу отримати вичерпні
-                  відомості про компРесурс пропонує комплексні пропозиції з
-                  різним рівнем функціоналу та сервісів. Все це дозволить
-                  отримати вичерпні відомості про комп
-                </p>
-              </div>
+									<!-- <img src="./images/portfolio_2.jpg" alt="Два чоловіка борються за м'яч" width="370" /> -->
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компРесурс пропонує комплексні пропозиції з різним
+										рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
+										компРесурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										отримати вичерпні відомості про комп
+									</p>
+								</div>
 
-              <div class="galery__description">
-                <h2 class="galery__title">
-                  Постер <span lang="en">New Orlean vs Golden Sta</span>
-                </h2>
-                <p class="galery__text">Дизайн</p>
-              </div>
-            </a>
-          </li>
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
+								<div class="galery__description">
+									<h2 class="galery__title"> Постер <span lang="en">New Orlean vs Golden Sta</span> </h2>
+									<p class="galery__text">Дизайн</p>
+								</div>
+							</a>
+						</li>
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-3.webp 1x, ./images/img-galery-desktop@2x-3.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-3.jpg 1x, ./images/img-galery-desktop@2x-3.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-3.webp 1x, ./images/img-galery-tablet@2x-3.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-3.jpg 1x, ./images/img-galery-tablet@2x-3.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-3.webp 1x, ./images/img-galery-mobile@2x-3.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-3.jpg 1x, ./images/img-galery-mobile@2x-3.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/img-galery-mobile-3.jpg"
+											alt="Логотип ресторану на фоні напівпрозорої риби"
+											class="picture-img"
+										/>
+									</picture>
+									<!-- <img src="./images/portfolio_3.jpg" alt="Логотип ресторану на фоні напівпрозорої риби" width="370" /> -->
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+									</p>
+								</div>
 
-                <picture>
-                  <source srcset="./images/img-galery-desktop-3.webp 1x, ./images/img-galery-desktop@2x-3.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-3.jpg 1x, ./images/img-galery-desktop@2x-3.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-3.webp 1x, ./images/img-galery-tablet@2x-3.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-3.jpg 1x, ./images/img-galery-tablet@2x-3.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-3.webp 1x, ./images/img-galery-mobile@2x-3.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-3.jpg 1x, ./images/img-galery-mobile@2x-3.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-3.jpg" alt="Логотип ресторану на фоні напівпрозорої риби"
-                    class="picture-img" />
-                </picture>
-                <!-- <img src="./images/portfolio_3.jpg" alt="Логотип ресторану на фоні напівпрозорої риби" width="370" /> -->
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
+								<div class="galery__description">
+									<h2 class="galery__title"> Ресторан <span lang="en">Seafood</span> </h2>
+									<p class="galery__text">Додаток</p>
+								</div>
+							</a>
+						</li>
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-4.webp 1x, ./images/img-galery-desktop@2x-4.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-4.jpg 1x, ./images/img-galery-desktop@2x-4.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-4.webp 1x, ./images/img-galery-tablet@2x-4.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-4.jpg 1x, ./images/img-galery-tablet@2x-4.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-4.webp 1x, ./images/img-galery-mobile@2x-4.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-4.jpg 1x, ./images/img-galery-mobile@2x-4.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/img-galery-mobile-4.jpg" alt="Зображені навушники" class="picture-img" />
+									</picture>
 
-              <div class="galery__description">
-                <h2 class="galery__title">
-                  Ресторан <span lang="en">Seafood</span>
-                </h2>
-                <p class="galery__text">Додаток</p>
-              </div>
-            </a>
-          </li>
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
-                <picture>
-                  <source srcset="./images/img-galery-desktop-4.webp 1x, ./images/img-galery-desktop@2x-4.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-4.jpg 1x, ./images/img-galery-desktop@2x-4.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-4.webp 1x, ./images/img-galery-tablet@2x-4.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-4.jpg 1x, ./images/img-galery-tablet@2x-4.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-4.webp 1x, ./images/img-galery-mobile@2x-4.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-4.jpg 1x, ./images/img-galery-mobile@2x-4.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-4.jpg" alt="Зображені навушники" class="picture-img" />
-                </picture>
+									<!-- <img src="./images/portfolio_4.jpg" alt="Зображені навушники" width="370" /> -->
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+									</p>
+								</div>
 
-                <!-- <img src="./images/portfolio_4.jpg" alt="Зображені навушники" width="370" /> -->
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
+								<div class="galery__description">
+									<h2 class="galery__title"> Проєкт <span lang="en">Prime</span> </h2>
+									<p class="galery__text">Маркетинг</p>
+								</div>
+							</a>
+						</li>
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-5.webp 1x, ./images/img-galery-desktop@2x-5.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-5.jpg 1x, ./images/img-galery-desktop@2x-5.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-5.webp 1x, ./images/img-galery-tablet@2x-5.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-5.jpg 1x, ./images/img-galery-tablet@2x-5.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-5.webp 1x, ./images/img-galery-mobile@2x-5.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-5.jpg 1x, ./images/img-galery-mobile@2x-5.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/img-galery-mobile-5.jpg" alt="!!!!!" class="picture-img" />
+									</picture>
 
-              <div class="galery__description">
-                <h2 class="galery__title">
-                  Проєкт <span lang="en">Prime</span>
-                </h2>
-                <p class="galery__text">Маркетинг</p>
-              </div>
-            </a>
-          </li>
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
-                <picture>
-                  <source srcset="./images/img-galery-desktop-5.webp 1x, ./images/img-galery-desktop@2x-5.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-5.jpg 1x, ./images/img-galery-desktop@2x-5.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-5.webp 1x, ./images/img-galery-tablet@2x-5.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-5.jpg 1x, ./images/img-galery-tablet@2x-5.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-5.webp 1x, ./images/img-galery-mobile@2x-5.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-5.jpg 1x, ./images/img-galery-mobile@2x-5.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-5.jpg" alt="!!!!!" class="picture-img" />
-                </picture>
+									<!-- <img src="./images/portfolio_5.jpg" alt="Дві коробки біла та світло-коричнева" width="370" /> -->
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+									</p>
+								</div>
 
-                <!-- <img src="./images/portfolio_5.jpg" alt="Дві коробки біла та світло-коричнева" width="370" /> -->
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
+								<div class="galery__description">
+									<h2 class="galery__title"> Проєкт <span lang="en">Boxes</span> </h2>
+									<p class="galery__text">Додаток</p>
+								</div>
+							</a>
+						</li>
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-6.webp 1x, ./images/img-galery-desktop@2x-6.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-6.jpg 1x, ./images/img-galery-desktop@2x-6.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-6.webp 1x, ./images/img-galery-tablet@2x-6.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-6.jpg 1x, ./images/img-galery-tablet@2x-6.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-6.webp 1x, ./images/img-galery-mobile@2x-6.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-6.jpg 1x, ./images/img-galery-mobile@2x-6.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/img-galery-mobile-6.jpg"
+											alt="На єкрані монітору зображена карта світу"
+											class="picture-img"
+										/>
+									</picture>
+									<!-- <img src="./images/portfolio_6.jpg" alt="На єкрані монітору зображена карта світу" width="370" /> -->
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+									</p>
+								</div>
 
-              <div class="galery__description">
-                <h2 class="galery__title">
-                  Проєкт <span lang="en">Boxes</span>
-                </h2>
-                <p class="galery__text">Додаток</p>
-              </div>
-            </a>
-          </li>
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
-                <picture>
-                  <source srcset="./images/img-galery-desktop-6.webp 1x, ./images/img-galery-desktop@2x-6.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-6.jpg 1x, ./images/img-galery-desktop@2x-6.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-6.webp 1x, ./images/img-galery-tablet@2x-6.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-6.jpg 1x, ./images/img-galery-tablet@2x-6.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-6.webp 1x, ./images/img-galery-mobile@2x-6.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-6.jpg 1x, ./images/img-galery-mobile@2x-6.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-6.jpg" alt="На єкрані монітору зображена карта світу"
-                    class="picture-img" />
-                </picture>
-                <!-- <img src="./images/portfolio_6.jpg" alt="На єкрані монітору зображена карта світу" width="370" /> -->
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
+								<div class="galery__description">
+									<h2 class="galery__title" lang="en"> Inspiration has no Borders </h2>
+									<p class="galery__text">Веб-сайт</p>
+								</div>
+							</a>
+						</li>
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-7.webp 1x, ./images/img-galery-desktop@2x-7.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-7.jpg 1x, ./images/img-galery-desktop@2x-7.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-7.webp 1x, ./images/img-galery-tablet@2x-7.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-7.jpg 1x, ./images/img-galery-tablet@2x-7.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-7.webp 1x, ./images/img-galery-mobile@2x-7.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-7.jpg 1x, ./images/img-galery-mobile@2x-7.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/img-galery-mobile-7.jpg" alt="Відкритий журнал" class="picture-img" />
+									</picture>
+									<!-- <img src="./images/portfolio_7.jpg" alt="Відкритий журнал" width="370" /> -->
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+									</p>
+								</div>
 
-              <div class="galery__description">
-                <h2 class="galery__title" lang="en">
-                  Inspiration has no Borders
-                </h2>
-                <p class="galery__text">Веб-сайт</p>
-              </div>
-            </a>
-          </li>
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
-                <picture>
-                  <source srcset="./images/img-galery-desktop-7.webp 1x, ./images/img-galery-desktop@2x-7.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-7.jpg 1x, ./images/img-galery-desktop@2x-7.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-7.webp 1x, ./images/img-galery-tablet@2x-7.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-7.jpg 1x, ./images/img-galery-tablet@2x-7.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-7.webp 1x, ./images/img-galery-mobile@2x-7.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-7.jpg 1x, ./images/img-galery-mobile@2x-7.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-7.jpg" alt="Відкритий журнал" class="picture-img" />
-                </picture>
-                <!-- <img src="./images/portfolio_7.jpg" alt="Відкритий журнал" width="370" /> -->
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
+								<div class="galery__description">
+									<h2 class="galery__title"> Видання <span lang="en">Limited Edition</span> </h2>
+									<p class="galery__text">Дизайн</p>
+								</div>
+							</a>
+						</li>
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-8.webp 1x, ./images/img-galery-desktop@2x-8.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-8.jpg 1x, ./images/img-galery-desktop@2x-8.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-8.webp 1x, ./images/img-galery-tablet@2x-8.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-8.jpg 1x, ./images/img-galery-tablet@2x-8.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-8.webp 1x, ./images/img-galery-mobile@2x-8.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-8.jpg 1x, ./images/img-galery-mobile@2x-8.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/img-galery-mobile-8.jpg" alt="Зображення бірки з написами" class="picture-img" />
+									</picture>
+									<!-- <img src="./images/portfolio_8.jpg" alt="Зображення бірки з написами" width="370" /> -->
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+									</p>
+								</div>
 
-              <div class="galery__description">
-                <h2 class="galery__title">
-                  Видання <span lang="en">Limited Edition</span>
-                </h2>
-                <p class="galery__text">Дизайн</p>
-              </div>
-            </a>
-          </li>
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
-                <picture>
-                  <source srcset="./images/img-galery-desktop-8.webp 1x, ./images/img-galery-desktop@2x-8.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-8.jpg 1x, ./images/img-galery-desktop@2x-8.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-8.webp 1x, ./images/img-galery-tablet@2x-8.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-8.jpg 1x, ./images/img-galery-tablet@2x-8.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-8.webp 1x, ./images/img-galery-mobile@2x-8.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-8.jpg 1x, ./images/img-galery-mobile@2x-8.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-8.jpg" alt="Зображення бірки з написами" class="picture-img" />
-                </picture>
-                <!-- <img src="./images/portfolio_8.jpg" alt="Зображення бірки з написами" width="370" /> -->
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
+								<div class="galery__description">
+									<h2 class="galery__title"> Проєкт <span lang="en">LAB</span> </h2>
+									<p class="galery__text">Маркетинг</p>
+								</div>
+							</a>
+						</li>
+						<li class="galery__item">
+							<a class="link galery__link" href="">
+								<div class="thumb">
+									<picture>
+										<source
+											srcset="./images/img-galery-desktop-9.webp 1x, ./images/img-galery-desktop@2x-9.webp 2x"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-desktop-9.jpg 1x, ./images/img-galery-desktop@2x-9.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-9.webp 1x, ./images/img-galery-tablet@2x-9.webp 2x"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-tablet-9.jpg 1x, ./images/img-galery-tablet@2x-9.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-9.webp 1x, ./images/img-galery-mobile@2x-9.webp 2x"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/img-galery-mobile-9.jpg 1x, ./images/img-galery-mobile@2x-9.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/img-galery-mobile-9.jpg" alt="Людина працює за ноутбуком" class="picture-img" />
+									</picture>
+									<!-- <img src="./images/portfolio_9.jpg" alt="Людина працює за ноутбуком" width="370" /> -->
+									<p class="galery__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+									</p>
+								</div>
 
-              <div class="galery__description">
-                <h2 class="galery__title">
-                  Проєкт <span lang="en">LAB</span>
-                </h2>
-                <p class="galery__text">Маркетинг</p>
-              </div>
-            </a>
-          </li>
-          <li class="galery__item">
-            <a class="link galery__link" href="">
-              <div class="thumb">
-                <picture>
+								<div class="galery__description">
+									<h2 class="galery__title" lang="en">Growing Business</h2>
+									<p class="galery__text">Додаток</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer class="page-footer section">
+			<div class="container page-footer__container">
+				<div class="page-footer__wrap">
+					<div class="">
+						<a class="logo link" href="./index.html" lang="en"><span class="logo--accent">Web</span>Studio</a>
+						<address class="footer-address">
+							<ul>
+								<li>
+									<a
+										class="link"
+										href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+										target="_blank"
+										rel="noopener noreferrer nofollow"
+										>м. Київ, пр-т Лесі Українки, 26</a
+									>
+								</li>
+								<li>
+									<a class="footer-address__contact link" href="mailto:info@devstudio.com" lang="en"
+										>info@devstudio.com</a
+									>
+								</li>
+								<li>
+									<a class="footer-address__contact link" href="tel:+380961111111">+38 096 111 11 11</a>
+								</li>
+							</ul>
+						</address>
+					</div>
+					<div class="page-footer__social">
+						<p class="title page-footer__title">приєднуйтесь</p>
+						<ul class="social__list">
+							<li class="social__item">
+								<a class="social__link social__link--bgcolor link" href="">
+									<svg class="icon social__icon" width="20" height="20">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link social__link--bgcolor link" href="">
+									<svg class="icon social__icon" width="20" height="20">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link social__link--bgcolor link" href="">
+									<svg class="icon social__icon" width="20" height="20">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link social__link--bgcolor link" href="">
+									<svg class="icon social__icon" width="20" height="20">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 
-                  <source srcset="./images/img-galery-desktop-9.webp 1x, ./images/img-galery-desktop@2x-9.webp 2x"
-                    media="(min-width: 1200px)" type="image/webp" />
-                  <source srcset="./images/img-galery-desktop-9.jpg 1x, ./images/img-galery-desktop@2x-9.jpg 2x"
-                    media="(min-width: 1200px)" />
-                  <source srcset="./images/img-galery-tablet-9.webp 1x, ./images/img-galery-tablet@2x-9.webp 2x"
-                    media="(min-width: 768px)" type="image/webp" />
-                  <source srcset="./images/img-galery-tablet-9.jpg 1x, ./images/img-galery-tablet@2x-9.jpg 2x"
-                    media="(min-width: 768px)" />
-                  <source srcset="./images/img-galery-mobile-9.webp 1x, ./images/img-galery-mobile@2x-9.webp 2x"
-                    media="(max-width: 767px)" type="image/webp" />
-                  <source srcset="./images/img-galery-mobile-9.jpg 1x, ./images/img-galery-mobile@2x-9.jpg 2x"
-                    media="(max-width: 767px)" />
-                  <img src="./images/img-galery-mobile-9.jpg" alt="Людина працює за ноутбуком" class="picture-img" />
-                </picture>
-                <!-- <img src="./images/portfolio_9.jpg" alt="Людина працює за ноутбуком" width="370" /> -->
-                <p class="galery__overlay">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем
-                  функціоналу та сервісів. Все це дозволить відвідувачу
-                  отримати вичерпні відомості про компанію чи приватну особу.
-                </p>
-              </div>
-
-              <div class="galery__description">
-                <h2 class="galery__title" lang="en">Growing Business</h2>
-                <p class="galery__text">Додаток</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <footer class="page-footer">
-    <div class="container page-footer__container">
-      <div>
-        <a class="logo link" href="./index.html" lang="en"><span class="logo--accent">Web</span>Studio</a>
-        <address class="footer-address">
-          <ul>
-            <li>
-              <a class="link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-                rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
-            </li>
-            <li>
-              <a class="footer-address__contact link" href="mailto:info@devstudio.com" lang="en">info@devstudio.com</a>
-            </li>
-            <li>
-              <a class="footer-address__contact link" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-          </ul>
-        </address>
-      </div>
-      <div>
-        <p class="title page-footer__title">приєднуйтесь</p>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--bgcolor link" href="">
-              <svg class="icon social__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--bgcolor link" href="">
-              <svg class="icon social__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--bgcolor link" href="">
-              <svg class="icon social__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--bgcolor link" href="">
-              <svg class="icon social__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <form class="form-footer">
-        <p class="title page-footer__title">Підпишіться на розсилку</p>
-        <div class="form-footer__conteiner">
-          <label>
-            <input class="form-footer__input" type="email" name="user-mail" placeholder="E-mail" />
-          </label>
-          <button class="btn-accent form-footer__btn" type="submit">
-            Підписатися
-            <svg class="icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
-        </div>
-      </form>
-    </div>
-  </footer>
-</body>
-
+				<div class="page-footer__form">
+					<p class="title page-footer__title">Підпишіться на розсилку</p>
+					<form class="form-footer">
+						<label>
+							<input class="form-footer__input" type="email" name="user-mail" placeholder="E-mail" />
+						</label>
+						<button class="btn-accent form-footer__btn" type="submit">
+							Підписатися
+							<svg class="icon" width="24" height="24">
+								<use href="./images/icons.svg#icon-send"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
