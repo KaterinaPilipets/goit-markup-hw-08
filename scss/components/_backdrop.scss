@@ -8,12 +8,11 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: visibility var(--modal-animetion-time-func), opacity var(--modal-animetion-time-func);
+    overflow-y: scroll;
+
     &.is-hidden {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
     }
 }
-
-
-
